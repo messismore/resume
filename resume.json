@@ -1,0 +1,186 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Felix Deiters",
+    "label": "Architect turned Programmer",
+    "image": "",
+    "email": "post@felixdeiters.de",
+    "phone": "+49 151 17875458",
+    "url": "http://felixdeiters.de",
+    "summary": "I'm an AEC technologist passionate about how information technology can improve the way we design and deliver buildings. Trained as an architect, I apply computer engineering methodologies to solve problems in AEC with code and data—from full stack web apps with great user experience to low level data engineering projects.",
+    "location": {
+      "address": "Jagowstraße 15",
+      "postalCode": "10555",
+      "city": "Berlin",
+      "countryCode": "DE",
+      "region": "Berlin"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "felixdeiters",
+        "url": "https://linkedin.com/in/felix-deiters-03b919210"
+      },
+      {
+        "network": "Github",
+        "username": "messismore",
+        "url": "https://github.com/messismore"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "M Moser Associates",
+      "location": "Berlin, DE | London, GB",
+      "description": "Workplace Design Firm",
+      "position": "Senior Data Solutions Engineer",
+      "url": "https://mmoser.com",
+      "startDate": "2022-05-15",
+      "summary": "M Moser Associates is a global leader in workplace design. As a member of the Sustainability, Engineering, and Technology group, I designed and implemented the data strategy for analytics, artificial intelligence, and data apps. I own several data products that serve 500+ users and were key in winning new projects.",
+      "highlights": [
+        "Built a data platform with Dagster, DuckDB, Polars, Azure Blob Storage",
+        "UX design and implementation of full stack web app: React, Base Web, ThreeJS, D3, GraphQL, Azure Functions, Digital Twin",
+        "Space analytics app using machine learning and Monte Carlo simulations: Scikit Learn, Streamlit",
+        "Created pyrec, a Python package to model spaces in the Real Estate Core ontology for analysis as well as bootstrapping digital twins.",
+        "Evolved design system and UX work with Figma, Base Web, and custom design token packages in npm and pip."
+      ]
+    },
+    {
+      "name": "Berlin University of the Arts",
+      "location": "Berlin, DE",
+      "description": "Department for Construction and Technology",
+      "position": "Research Assistant",
+      "url": "https://udk.berlin",
+      "startDate": "2020-04-01",
+      "endDate": "2022-05-15",
+      "summary": "As technical lead for a space analytics research project in collaboration with the international architecture firm Henn, I designed and implemented the data infrastructure as well as an interactive data exploration tool using machine learning. I also contributed to a research project exploring decentralised, multimodal simulation architectures.",
+      "highlights": ["Scikit Learn, Pandas, Plotly Dash", "Docker, Jupyter Notebooks, nbdev", "Rhino Compute, Hops"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Berlin University of the Arts",
+      "url": "https://www.udk.berlin/",
+      "area": "Architecture",
+      "studyType": "Master of Arts",
+      "startDate": "2020-04-01",
+      "endDate": "2022-10-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Technische Universität Berlin",
+      "url": "https://www.tu.berlin/",
+      "area": "Computer Engineering (incomplete)",
+      "studyType": "Bachelor of Science",
+      "startDate": "2018-10-01",
+      "endDate": "2020-10-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Berlin University of the Arts",
+      "url": "https://www.udk.berlin/",
+      "area": "Architecture",
+      "studyType": "Bachelor of Arts",
+      "startDate": "2011-10-01",
+      "endDate": "2016-10-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "publications": [
+    {
+      "name": "How Indoor Positioning Technology Can Enhance Our Understanding of Communication Patterns in Office Environments",
+      "publisher": "Society for Modeling & Simulation International",
+      "releaseDate": "2023-05",
+      "url": "https://www.researchgate.net/publication/371048983_HOW_INDOOR_POSITIONING_TECHNOLOGY_CAN_ENHANCE_OUR_UNDERSTANDING_OF_COMMUNICATION_PATTERNS_IN_OFFICE_ENVIRONMENTS?enrichId=rgreq-cc979cdb99e89786325630dc2dacdb95-XXX&enrichSource=Y292ZXJQYWdlOzM3MTA0ODk4MztBUzoxMTQzMTI4MTE2MjA1MTkyN0AxNjg1MTA0ODUxNDc0&el=1_x_3&_esc=publicationCoverPdf",
+      "summary": "This paper presents an early-stage process to track communication patterns in office spaces using a real-time location system with sub-meter accuracy."
+    },
+    {
+      "name": "A Digital, Networked, Adaptive Toolset to Capture and Distribute Organisational Knowledge – Speckle CI",
+      "publisher": "Springer eBooks",
+      "releaseDate": "2022-09",
+      "url": "http://crossmark.crossref.org/dialog/?doi=10.1007/978-3-031-13249-0_4&domain=pdf",
+      "summary": "This work explores the potential of networked, composable tools as a means to capture and distribute organisational knowledge."
+    }
+  ],
+  "skills": [
+    {
+      "name": "AECtech",
+      "level": "",
+      "keywords": [
+        "Speckle",
+        "Real Estate Core",
+        "Rhino Compute",
+        "Hops",
+        "Digital Twinning",
+        "Autodesk Platform Services"
+      ]
+    },
+    {
+      "name": "AI",
+      "level": "",
+      "keywords": ["LangChain", "Scikit Learn", "Azure Machine Learning"]
+    },
+    {
+      "name": "Data Engineering",
+      "level": "",
+      "keywords": ["Dagster", "S3", "ABS", "DuckDB", "Polars", "Pandas", "Streamlit"]
+    },
+    {
+      "name": "Full Stack Web Development",
+      "level": "",
+      "keywords": ["React", "D3", "ThreeJS", "Node", "Cloudflare Workers", "WCAG"]
+    },
+    {
+      "name": "DevOps",
+      "level": "",
+      "keywords": ["IaC", "Docker", "Azure", "AWS", "Github Actions"]
+    },
+    {
+      "name": "DesignOps",
+      "level": "",
+      "keywords": ["Figma", "Storybook", "Design Systems"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "German",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "C2"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "B1"
+    },
+    {
+      "language": "French",
+      "fluency": "B1"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": [
+    {
+      "name": "Speckle CI",
+      "description": "Speckle CI is a proof-of-concept continuous integration and delivery platform tailored for AEC workflows. By enabling continuous testing, simulation, and artifact generation from model data, it brings software engineering best practices—such as test-driven development—into the hands of AEC practitioners.",
+      "highlights": ["Speckle", "Rhino Compute", "Express, MongoDB", "Vue, Vuex, Vuetify"],
+      "keywords": ["Speckle", "CI/CD", "AEC"],
+      "startDate": "2021-04",
+      "endDate": "2021-10",
+      "url": "https://github.com/messismore/speckle-ci",
+      "roles": ["Master thesis"],
+      "entity": "Department for Construction and Technology",
+      "type": "application"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
