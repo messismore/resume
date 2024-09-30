@@ -50,7 +50,7 @@ export default function Header(basics = {}) {
               ${network && Icon(network, 'user')} ${Link(url, username)}
               ${network && html`<span class="network">(${network})</span>`}
             </li>
-          `,
+          `
         )}
       </ul>
     </header>
