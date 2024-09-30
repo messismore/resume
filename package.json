@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "init": "resumed init",
-    "start": "resumed --theme jsonresume-theme-felixdeiters"
+    "start": "resumed --output index.html --theme jsonresume-theme-felixdeiters"
   },
   "dependencies": {
     "jsonresume-theme-felixdeiters": "file:./theme",
