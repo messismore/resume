@@ -2,10 +2,9 @@
   color-scheme: light dark;
 
   --color-background-light: #ffffff; /* White */
-  --color-dimmed-light: #f3f4f5; /* Light Gray 200 */
-  --color-primary-light: #191e23; /* Dark Gray 900 */
-  --color-secondary-light: #6c7781; /* Dark Gray 300 */
-  --color-accent-light: #0073aa; /* WordPress Blue */
+  --color-dimmed-light: rgb(245 245 244); /* bg-stone-100 */
+  --color-primary-light: rgb(10 10 10); /* bg-neutral-900 */
+  --color-secondary-light: rgb(23 23 23); /* bg-neutral-900 */
 
   --color-background-dark: #191e23; /* Dark Gray 900 */
   --color-dimmed-dark: #23282d; /* Dark Gray 800 */
@@ -53,20 +52,23 @@ body {
   color: var(--color-primary);
   display: grid;
   font:
-    1em/1.5 Lato,
+    1em/1.5 Graphik,
     sans-serif;
-  gap: 2em;
+  gap: 4em;
   grid-template-columns:
     [full-start]
     1fr
-    [main-start side-start]
-    minmax(min-content, 12em)
-    [side-end content-start]
-    minmax(min-content, 36em)
-    [main-end content-end]
+    [main-start leftside-start highlights-start]
+    minmax(min-content, 20em)
+    [leftside-end content-start]
+    minmax(min-content, 20em)
+    minmax(min-content, 20em)
+    [main-end highlights-end content-end rightside-start]
+    minmax(min-content, 20em)
+    [rightside-end]
     1fr
     [full-end];
-  grid-template-rows: auto [content] 0;
+  grid-template-rows: auto [work] [projects] 0;
   margin-bottom: 4em;
 }
 
@@ -100,11 +102,12 @@ a:hover {
   text-decoration: underline;
 }
 
-h1,
-h2,
-h3,
+h1 {
+  font-weight: 700;
+}
+h4,
 h5 {
-  font-weight: normal;
+  font-weight: 600;
 }
 
 h1,
@@ -119,18 +122,25 @@ h1 {
 
 h2 {
   color: var(--color-secondary);
-  font-size: var(--scale4);
+  font-size: var(--scale2);
+  font-weight: 400;
 }
 
 h3 {
   color: var(--color-secondary);
-  font-size: var(--scale3);
-  grid-column: side;
-  margin-bottom: 1rem;
+  font-size: var(--scale2);
+  grid-column: leftside;
+  font-weight: 100;
+  padding-block-end: 1em;
+}
+
+h3 {
+  border-block-start: solid var(--color-secondary) 0.1rem;
 }
 
 h4 {
   font-size: var(--scale2);
+  padding-block-end: 0.6em;
 }
 
 h5 {
@@ -160,6 +170,28 @@ svg {
   vertical-align: text-bottom;
 }
 
+#skills,
+#education,
+#languages {
+  grid-column: rightside;
+}
+
+#work,
+#projects,
+#publications {
+  grid-column: content;
+}
+
+#work,
+#skills {
+  grid-row: work;
+}
+
+#projects,
+#education {
+  grid-row: auto;
+}
+
 .masthead {
   background: var(--color-dimmed);
   display: inherit;
@@ -170,9 +202,24 @@ svg {
   text-align: center;
 }
 
-.masthead > *,
-section {
-  grid-column: main;
+.masthead > * {
+  grid-column: highlights;
+}
+
+.masthead > div {
+  display: grid;
+}
+
+.masthead > div > h1 {
+  grid-row: 1;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.masthead > div > h2 {
+  grid-row: 2;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .masthead > img {
@@ -180,6 +227,13 @@ section {
   border-radius: 50%;
   margin: 0 auto;
   max-width: 12em;
+}
+
+.masthead > * > p {
+  color: var(--color-secondary-light);
+  font-size: var(--scale2);
+  font-weight: 100;
+  line-height: 1.2;
 }
 
 article > * + *,
@@ -190,20 +244,27 @@ blockquote > * + *,
 
 .meta {
   color: var(--color-secondary);
+  padding-block-end: 0.6em;
 }
 
 .stack {
   display: grid;
   gap: 1.5em;
+  grid-column: content;
 }
 
 .icon-list {
+  /* border-block-start: solid var(--color-secondary) 0.2em; */
   display: flex;
+  grid-column: rightside;
+  grid-row-start: 1;
+  grid-row-end: 2;
   flex-wrap: wrap;
   gap: 0.4em 1em;
   justify-content: center;
   list-style: none;
   padding: 0;
+  /* padding-block-start: 0.2em; */
 }
 
 .grid-list {
@@ -257,7 +318,6 @@ blockquote > * + *,
 
 @media print, (min-width: 48em) {
   h3 {
-    text-align: right;
     margin-bottom: inherit;
   }
 
@@ -265,19 +325,10 @@ blockquote > * + *,
     text-align: inherit;
   }
 
-  .masthead > *,
-  section {
-    grid-column: content;
-  }
-
   .masthead img {
-    grid-column: side;
+    grid-column: leftside;
     grid-row: span 2;
     max-width: 100%;
-  }
-
-  section {
-    display: contents;
   }
 
   .icon-list {
@@ -285,7 +336,7 @@ blockquote > * + *,
   }
 
   .grid-list {
-    grid-template-columns: repeat(auto-fit, minmax(calc((100% - 1em) / 2), 1fr));
+    grid-template-columns: 1fr;
   }
 }
 

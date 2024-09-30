@@ -28,7 +28,6 @@ export default function Resume(resume, { css, js } = {}) {
         <meta charset="utf-8" />
         ${Meta(resume.basics)}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
         ${css &&
         html`<style>
           ${css}
@@ -39,9 +38,9 @@ export default function Resume(resume, { css, js } = {}) {
         </script>`}
       </head>
       <body>
-        ${Header(resume.basics)} ${Work(resume.work)} ${Volunteer(resume.volunteer)} ${Education(resume.education)}
-        ${Projects(resume.projects)} ${Awards(resume.awards)} ${Certificates(resume.certificates)}
-        ${Publications(resume.publications)} ${Skills(resume.skills)} ${Languages(resume.languages)}
+        ${Header(resume.basics)} ${Skills(resume.skills)} ${Work(resume.work)} ${Projects(resume.projects)}
+        ${Volunteer(resume.volunteer)} ${Education(resume.education)} ${Awards(resume.awards)}
+        ${Certificates(resume.certificates)} ${Publications(resume.publications)} ${Languages(resume.languages)}
         ${Interests(resume.interests)} ${References(resume.references)}
       </body>
     </html>`

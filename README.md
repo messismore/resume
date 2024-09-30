@@ -1,10 +1,6 @@
-# jsonresume-theme-even
+# jsonresume-theme-felixdeiters
 
-[![npm package version](https://img.shields.io/npm/v/jsonresume-theme-even.svg)](https://www.npmjs.com/package/jsonresume-theme-even)
-[![Build status](https://img.shields.io/github/actions/workflow/status/rbardini/jsonresume-theme-even/main.yml)](https://github.com/rbardini/jsonresume-theme-even/actions)
-[![Deploy status](https://img.shields.io/netlify/7c0cb4f0-e270-4085-8f75-a8850cf45b2a?label=deploy)](https://app.netlify.com/sites/jsonresume-theme-even/deploys)
-[![Code coverage](https://img.shields.io/codecov/c/github/rbardini/jsonresume-theme-even.svg)](https://codecov.io/gh/rbardini/jsonresume-theme-even)
-[![Dependencies status](https://img.shields.io/librariesio/release/npm/jsonresume-theme-even)](https://libraries.io/npm/jsonresume-theme-even)
+> ℹ️ This theme of is a fork of [jsonresume-theme-even](https://github.com/rbardini/jsonresume-theme-even?tab=readme-ov-file) by [rbardini](https://github.com/rbardini)
 
 A flat [JSON Resume](https://jsonresume.org/) theme, compatible with the latest [resume schema](https://github.com/jsonresume/resume-schema).
 Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-flat).
@@ -16,8 +12,6 @@ Inspired by [jsonresume-theme-flat](https://github.com/erming/jsonresume-theme-f
 - 🧩 Standalone CLI
 - 📦 ESM and CommonJS builds
 - 🤖 TypeScript typings
-
-[View demo →](https://jsonresume-theme-even.rbrd.in)
 
 ## Installation
 
