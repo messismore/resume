@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "init": "resumed init",
+    "start": "resumed --theme jsonresume-theme-felixdeiters"
+  },
+  "dependencies": {
+    "jsonresume-theme-felixdeiters": "file:./theme",
+    "resumed": "^3.0.0"
+  }
+}
+
