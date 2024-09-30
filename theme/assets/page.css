@@ -51,9 +51,7 @@ body {
   background: var(--color-background);
   color: var(--color-primary);
   display: grid;
-  font:
-    1em/1.5 Graphik,
-    sans-serif;
+  font: 1em/1.5 Graphik, sans-serif;
   gap: 4em;
   grid-template-columns:
     [full-start]
@@ -230,7 +228,7 @@ svg {
 }
 
 .masthead > * > p {
-  color: var(--color-secondary-light);
+  color: var(--color-secondary);
   font-size: var(--scale2);
   font-weight: 100;
   line-height: 1.2;

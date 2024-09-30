@@ -1,6 +1,6 @@
 {
   "name": "jsonresume-theme-felixdeiters",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A flat JSON Resume theme, compatible with the latest resume schema",
   "keywords": [
     "resume",
@@ -85,3 +85,4 @@
     "vitest": "1.6.0"
   }
 }
+
