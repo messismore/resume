@@ -70,32 +70,20 @@ html {
   padding: 0;
 }
 
-html {
-  font-size: 14px;
-}
-
 body {
   background: var(--color-background);
   color: var(--color-primary);
   display: grid;
-  font:
-    1em/1.5 Graphik,
-    sans-serif;
   gap: 4em;
   grid-template-columns:
     [full-start]
     1fr
-    [main-start leftside-start highlights-start]
-    minmax(min-content, 20em)
-    [leftside-end content-start]
-    minmax(min-content, 20em)
-    minmax(min-content, 20em)
-    [main-end highlights-end content-end rightside-start]
-    minmax(min-content, 20em)
-    [rightside-end]
+    [content-start]
+    minmax(min-content, 60em)
+    [content-end]
     1fr
     [full-end];
-  grid-template-rows: auto [work] [projects] 0;
+  grid-template-rows: auto [work-start] auto [work-end projects-start] auto [projects-end];
   margin-bottom: 4em;
 }
 
@@ -147,6 +135,10 @@ h1 {
   font-size: var(--scale-5);
 }
 
+h1 + h2 {
+  padding-top: var(--scale-0);
+}
+
 h2 {
   color: var(--color-secondary);
   font-size: var(--scale-2);
@@ -155,7 +147,6 @@ h2 {
 
 h3 {
   color: var(--color-secondary);
-  grid-column: leftside;
   font-size: var(--scale-2);
   font-weight: 100;
   padding-block-end: 1em;
@@ -197,40 +188,37 @@ svg {
   vertical-align: text-bottom;
 }
 
-#skills,
-#education,
-#languages {
-  grid-column: rightside;
-}
-
-#work,
-#projects,
-#publications {
+body > * {
   grid-column: content;
 }
 
-#work,
-#skills {
+#work {
   grid-row: work;
 }
 
-#projects,
-#education {
-  grid-row: auto;
+#projects {
+  grid-row: projects;
 }
 
 .masthead {
   background: var(--color-dimmed);
-  display: inherit;
+  display: grid;
   gap: inherit;
-  grid-column: full;
-  grid-template-columns: inherit;
   padding: 4em 0;
-  text-align: center;
+  grid-column: full;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [content-start]
+    minmax(min-content, 60em)
+    [content-end]
+    1fr
+    [full-end];
+  text-align: inherit;
 }
 
 .masthead > * {
-  grid-column: highlights;
+  grid-column: content;
 }
 
 .masthead > div {
@@ -277,21 +265,14 @@ blockquote > * + *,
 .stack {
   display: grid;
   gap: 1.5em;
-  grid-column: content;
 }
 
 .icon-list {
-  /* border-block-start: solid var(--color-secondary) 0.2em; */
   display: flex;
-  grid-column: rightside;
-  grid-row-start: 1;
-  grid-row-end: 2;
   flex-wrap: wrap;
   gap: 0.4em 1em;
-  justify-content: center;
   list-style: none;
   padding: 0;
-  /* padding-block-start: 0.2em; */
 }
 
 .grid-list {
@@ -343,13 +324,51 @@ blockquote > * + *,
   border-radius: 50%;
 }
 
-@media print, (min-width: 48em) {
+/* Multi-column layout above breakpoint */
+@media (min-width: 48em) {
+  body {
+    grid-template-columns:
+      [full-start]
+      1fr
+      [main-start leftside-start highlights-start]
+      minmax(min-content, 20em)
+      [leftside-end content-start]
+      minmax(min-content, 20em)
+      minmax(min-content, 20em)
+      [main-end highlights-end content-end rightside-start]
+      minmax(min-content, 20em)
+      [rightside-end]
+      1fr
+      [full-end];
+    grid-template-rows: auto [work] [projects] 0;
+  }
+
+  #skills {
+    grid-row: work;
+  }
+
+  #projects,
+  #education {
+    grid-row: auto;
+  }
+
+  #skills,
+  #education,
+  #languages {
+    grid-column: rightside;
+  }
+
   h3 {
     margin-bottom: inherit;
   }
 
   .masthead {
-    text-align: inherit;
+    grid-column: full;
+    grid-template-columns: inherit;
+  }
+
+  .masthead > * {
+    grid-column: highlights;
   }
 
   .masthead img {
@@ -360,6 +379,9 @@ blockquote > * + *,
 
   .icon-list {
     flex-direction: column;
+    grid-column: rightside;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 
   .grid-list {
