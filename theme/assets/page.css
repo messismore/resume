@@ -18,13 +18,16 @@
   --color-secondary: var(--color-secondary-light);
   --color-accent: var(--color-accent-light);
 
-  --scale-ratio: 1.25;
-  --scale0: 1rem;
-  --scale1: calc(var(--scale0) * var(--scale-ratio));
-  --scale2: calc(var(--scale1) * var(--scale-ratio));
-  --scale3: calc(var(--scale2) * var(--scale-ratio));
-  --scale4: calc(var(--scale3) * var(--scale-ratio));
-  --scale5: calc(var(--scale4) * var(--scale-ratio));
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --scale--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+  --scale--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+  --scale-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+  --scale-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+  --scale-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+  --scale-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+  --scale-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+  --scale-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
 }
 
 @use '~inter-ui/default' with (
@@ -141,19 +144,19 @@ h3 {
 }
 
 h1 {
-  font-size: var(--scale5);
+  font-size: var(--scale-5);
 }
 
 h2 {
   color: var(--color-secondary);
-  font-size: var(--scale2);
+  font-size: var(--scale-2);
   font-weight: 400;
 }
 
 h3 {
   color: var(--color-secondary);
-  font-size: var(--scale2);
   grid-column: leftside;
+  font-size: var(--scale-2);
   font-weight: 100;
   padding-block-end: 1em;
 }
@@ -163,16 +166,16 @@ h3 {
 }
 
 h4 {
-  font-size: var(--scale2);
+  font-size: var(--scale-2);
   padding-block-end: 0.6em;
 }
 
 h5 {
-  font-size: var(--scale1);
+  font-size: var(--scale-1);
 }
 
 h6 {
-  font-size: var(--scale0);
+  font-size: var(--scale-0);
 }
 
 blockquote {
@@ -255,7 +258,7 @@ svg {
 
 .masthead > * > p {
   color: var(--color-secondary);
-  font-size: var(--scale2);
+  font-size: var(--scale-2);
   font-weight: 100;
   line-height: 1.2;
 }
