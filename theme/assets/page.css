@@ -27,6 +27,30 @@
   --scale5: calc(var(--scale4) * var(--scale-ratio));
 }
 
+@use '~inter-ui/default' with (
+  $inter-font-display: swap,
+  $inter-font-path: '~inter-ui/web'
+);
+
+@use '~inter-ui/variable' with (
+  $inter-font-display: swap,
+  $inter-font-path: '~inter-ui/variable'
+);
+
+@include default.all;
+@include variable.all;
+
+html {
+  font-family: 'Inter', 'system-ui';
+  font-size: 14px;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'InterVariable', 'system-ui';
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--color-background-dark);
@@ -51,7 +75,9 @@ body {
   background: var(--color-background);
   color: var(--color-primary);
   display: grid;
-  font: 1em/1.5 Graphik, sans-serif;
+  font:
+    1em/1.5 Graphik,
+    sans-serif;
   gap: 4em;
   grid-template-columns:
     [full-start]
