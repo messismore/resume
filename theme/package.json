@@ -51,7 +51,7 @@
     "build-editor": "vite build editor",
     "dev": "vite serve editor",
     "format": "prettier .",
-    "prepare": "husky && npm run build",
+    "prepare": "cd .. && husky theme/.husky && cd theme && npm run build",
     "test": "vitest",
     "type-check": "tsc"
   },
@@ -85,4 +85,3 @@
     "vitest": "1.6.0"
   }
 }
-
