@@ -40,7 +40,7 @@
         "Built a data platform with Dagster, DuckDB, Polars, Azure Blob Storage",
         "UX design and implementation of full stack web app: React, Base Web, ThreeJS, D3, GraphQL, Azure Functions, Digital Twin",
         "Space analytics app using machine learning and Monte Carlo simulations: Scikit Learn, Streamlit",
-        "Created pyrec, a Python package to model spaces in the Real Estate Core ontology for analysis as well as bootstrapping digital twins.",
+        "Created *pyrec,* a Python package to model spaces in the Real Estate Core ontology for analysis as well as bootstrapping digital twins.",
         "Evolved design system and UX work with Figma, Base Web, and custom design token packages in npm and pip."
       ]
     },
