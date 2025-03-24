@@ -84,6 +84,7 @@ body {
     1fr
     [full-end];
   grid-template-rows: auto [work-start] auto [work-end projects-start] auto [projects-end];
+  grid-auto-flow: dense;
   margin-bottom: 4em;
 }
 
@@ -206,15 +207,14 @@ body > * {
   gap: inherit;
   padding: 4em 0;
   grid-column: full;
-  grid-template-columns:
-    [full-start]
-    1fr
-    [content-start]
-    minmax(min-content, 60em)
-    [content-end]
-    1fr
-    [full-end];
+  grid-template-columns: inherit;
   text-align: inherit;
+}
+
+@supports (grid-template-columns: subgrid) {
+  .masthead {
+    grid-template-columns: subgrid;
+  }
 }
 
 .masthead > * {
@@ -350,11 +350,14 @@ blockquote > * + *,
   #projects,
   #education {
     grid-row: auto;
+    grid-column: content;
   }
 
   #skills,
   #education,
-  #languages {
+  #languages,
+  #interests,
+  #references {
     grid-column: rightside;
   }
 
@@ -364,7 +367,6 @@ blockquote > * + *,
 
   .masthead {
     grid-column: full;
-    grid-template-columns: inherit;
   }
 
   .masthead > * {
