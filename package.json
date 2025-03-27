@@ -2,12 +2,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "init": "resumed init",
-    "start": "resumed --output index.html --theme jsonresume-theme-felixdeiters"
+    "build": "resumed --output index.html --theme jsonresume-theme-felixdeiters",
+    "ci": "npm run build"
   },
   "dependencies": {
     "jsonresume-theme-felixdeiters": "file:./theme",
     "resumed": "^3.0.0"
   }
 }
-
