@@ -25,12 +25,9 @@ jobs:
       - name: Install
         run: npm ci
 
-      - name: Install Theme
+      - name: Debug
         run: |
-          cd theme
-          npm install
-          cd ..
-          npm link ./theme
+          ls -l node_modules | grep jsonresume
 
       - name: Build
         run: mkdir dist && npm run build
