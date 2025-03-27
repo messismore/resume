@@ -25,6 +25,13 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Install Theme
+        run: |
+          cd theme
+          npm install
+          cd ..
+          npm link ./theme
+
       - name: Build
         run: mkdir dist && npm run build
 
