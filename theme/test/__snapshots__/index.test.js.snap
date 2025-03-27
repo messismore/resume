@@ -10,40 +10,9 @@ exports[`renders a resume 1`] = `
     <meta name="description" content="Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!" />
   
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" />
         
         <script type="module">
           const pluralize = (num, str) => \`\${num} \${num === 1 ? str : str.concat('s')}\`
-
-class TimeDuration extends HTMLElement {
-  connectedCallback() {
-    const [from, to] = this.querySelectorAll('time')
-    if (!from) return
-
-    const startDate = new Date(from.dateTime || from.textContent)
-    const endDate = new Date(to ? to.dateTime || to.textContent : Date.now())
-    const diffDate = new Date(endDate - startDate)
-
-    const years = diffDate.getFullYear() - 1970
-    const months = diffDate.getMonth()
-    const days = diffDate.getDate() - 1
-
-    const segments = [
-      years && pluralize(years, 'yr'),
-      months && pluralize(months, 'mo'),
-      days && !years && !months && pluralize(days, 'day'),
-    ].filter(Boolean)
-    if (!segments.length) return
-
-    const duration = document.createElement('time')
-    duration.classList.add('duration')
-    duration.textContent = '· '.concat(segments.join(' '))
-
-    this.append(' ', duration)
-  }
-}
-
-customElements.define('time-duration', TimeDuration)
 
         </script>
       </head>
@@ -51,7 +20,7 @@ customElements.define('time-duration', TimeDuration)
         
     <header class="masthead">
       <img src="image.jpg" alt="" />
-      <div><h1>Richard Hendriks</h1> <h2>Programmer</h2></div>
+      <div><h1>Richard<br>Hendriks</h1> <h2>Programmer</h2></div>
       <article><p>Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinal!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation!</p></article>
       <ul class="icon-list">
         
@@ -86,6 +55,31 @@ customElements.define('time-duration', TimeDuration)
       </ul>
     </header>
    
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+          
+              <div>
+                <h4>Web Development</h4>
+                
+                  <ul class="tag-list">
+                    <li>HTML</li><li>CSS</li><li>Javascript</li>
+                  </ul>
+                
+              </div>
+            
+              <div>
+                <h4>Compression</h4>
+                
+                  <ul class="tag-list">
+                    <li>Mpeg</li><li>MP4</li><li>GIF</li>
+                  </ul>
+                
+              </div>
+            
+        </div>
+      </section>
+     
       <section id="work">
         <h3>Work</h3>
         <div class="stack">
@@ -119,6 +113,38 @@ customElements.define('time-duration', TimeDuration)
         </div>
       </section>
      
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+          
+              <article>
+                <header>
+                  <h4><a href="http://missdirection.example.com">Miss Direction</a></h4>
+                  <div class="meta">
+                    <div>
+                      <strong>Team lead and Designer</strong>
+                      at <strong>Smoogle</strong>
+                    </div>
+                    <div><time datetime="2016-08-24">Aug 2016</time></div> <div>application</div>
+                  </div>
+                </header>
+                <p>A mapping engine that misguides you</p>
+                
+                  <ul>
+                    <li><p>Won award at AIHacks 2016</p></li><li><p>Built by all women team of newbie programmers</p></li><li><p>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</p></li>
+                  </ul>
+                
+                
+                  <ul class="tag-list">
+                    <li>GoogleMaps</li><li>Chrome Extension</li><li>Javascript</li>
+                  </ul>
+                
+              </article>
+            
+        </div>
+      </section>
+    
+        
       <section id="volunteer">
         <h3>Volunteer</h3>
         <div class="stack">
@@ -165,38 +191,6 @@ customElements.define('time-duration', TimeDuration)
             
         </div>
       </section>
-    
-        
-      <section id="projects">
-        <h3>Projects</h3>
-        <div class="stack">
-          
-              <article>
-                <header>
-                  <h4><a href="http://missdirection.example.com">Miss Direction</a></h4>
-                  <div class="meta">
-                    <div>
-                      <strong>Team lead and Designer</strong>
-                      at <strong>Smoogle</strong>
-                    </div>
-                    <div><time datetime="2016-08-24">Aug 2016</time></div> <div>application</div>
-                  </div>
-                </header>
-                <p>A mapping engine that misguides you</p>
-                
-                  <ul>
-                    <li><p>Won award at AIHacks 2016</p></li><li><p>Built by all women team of newbie programmers</p></li><li><p>Using modern technologies such as GoogleMaps, Chrome Extension and Javascript</p></li>
-                  </ul>
-                
-                
-                  <ul class="tag-list">
-                    <li>GoogleMaps</li><li>Chrome Extension</li><li>Javascript</li>
-                  </ul>
-                
-              </article>
-            
-        </div>
-      </section>
      
       <section id="awards">
         <h3>Awards</h3>
@@ -214,8 +208,8 @@ customElements.define('time-duration', TimeDuration)
             
         </div>
       </section>
-     
-        
+    
+         
       <section id="publications">
         <h3>Publications</h3>
         <div class="stack">
@@ -230,31 +224,6 @@ customElements.define('time-duration', TimeDuration)
                 </header>
                 <p>Innovative middle-out compression algorithm that changes the way we store data.</p>
               </article>
-            
-        </div>
-      </section>
-     
-      <section id="skills">
-        <h3>Skills</h3>
-        <div class="grid-list">
-          
-              <div>
-                <h4>Web Development</h4>
-                
-                  <ul class="tag-list">
-                    <li>HTML</li><li>CSS</li><li>Javascript</li>
-                  </ul>
-                
-              </div>
-            
-              <div>
-                <h4>Compression</h4>
-                
-                  <ul class="tag-list">
-                    <li>Mpeg</li><li>MP4</li><li>GIF</li>
-                  </ul>
-                
-              </div>
             
         </div>
       </section>

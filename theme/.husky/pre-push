@@ -1,1 +1,2 @@
+cd theme
 npm test -- run
