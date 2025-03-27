@@ -46,11 +46,12 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "json2ts node_modules/@jsonresume/schema/schema.json schema.d.ts",
+    "prebuild": "json2ts ../node_modules/@jsonresume/schema/schema.json schema.d.ts",
     "build": "vite build",
     "build-editor": "vite build editor",
     "dev": "vite serve editor",
     "format": "prettier .",
+    "prepare": "cd .. && husky theme/.husky && cd theme && npm run build",
     "test": "vitest",
     "type-check": "tsc"
   },
@@ -72,6 +73,7 @@
     "codemirror": "6.0.1",
     "debounce": "2.1.1",
     "html-validate": "8.22.0",
+    "husky": "9.1.5",
     "json-schema-to-typescript": "15.0.2",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
