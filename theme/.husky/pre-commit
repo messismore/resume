@@ -1,2 +1,0 @@
-cd theme
-npx --no lint-staged
