@@ -1,5 +1,9 @@
 {
   "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "cd theme && \\\nnpx vite build && \\\ncd .. && \\\nnpm run build"
+    },
     "run" : {
       "enabled" : true,
       "script" : "cd theme && npm run dev"
