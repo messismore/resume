@@ -6,7 +6,7 @@
     "image": "",
     "email": "post@felixdeiters.de",
     "url": "http://felixdeiters.de",
-    "summary": "I'm an AEC technologist passionate about how information technology can improve the way we design and deliver buildings. Trained as an architect, I apply computer engineering methodologies to solve problems in AEC with code and data—from full stack web apps with great user experience to low level data engineering projects.",
+    "summary": "I'm an AEC technologist passionate about how information technology can improve the way we design and deliver buildings. Trained as an architect, I apply computer engineering methodologies to solve problems in AEC with code and data.",
     "location": {
       "address": "Jagowstraße 15",
       "postalCode": "10555",
@@ -53,7 +53,11 @@
       "startDate": "2020-04-01",
       "endDate": "2022-05-15",
       "summary": "As technical lead for a space analytics research project in collaboration with the international architecture firm Henn, I designed and implemented the data infrastructure as well as an interactive data exploration tool using machine learning. I also contributed to a research project exploring decentralised, multimodal simulation architectures.",
-      "highlights": ["Scikit Learn, Pandas, Plotly Dash", "Docker, Jupyter Notebooks, nbdev", "Rhino Compute, Hops"]
+      "highlights": [
+        "Scikit Learn, Pandas, Plotly Dash",
+        "Docker, Jupyter Notebooks, nbdev",
+        "Rhino Compute, Hops"
+      ]
     }
   ],
   "education": [
@@ -117,20 +121,31 @@
         "Autodesk Platform Services"
       ]
     },
-    {
-      "name": "AI",
-      "level": "",
-      "keywords": ["LangChain", "Scikit Learn", "Azure Machine Learning"]
-    },
+
     {
       "name": "Data Engineering",
       "level": "",
-      "keywords": ["Dagster", "S3", "ABS", "DuckDB", "Polars", "Pandas", "Streamlit"]
+      "keywords": [
+        "Dagster",
+        "S3",
+        "ABS",
+        "DuckDB",
+        "Polars",
+        "Pandas",
+        "Streamlit"
+      ]
     },
     {
       "name": "Full Stack Web Development",
       "level": "",
-      "keywords": ["React", "D3", "ThreeJS", "Node", "Cloudflare Workers", "WCAG"]
+      "keywords": [
+        "React",
+        "D3",
+        "ThreeJS",
+        "Node",
+        "Cloudflare Workers",
+        "WCAG"
+      ]
     },
     {
       "name": "DevOps",
@@ -167,7 +182,12 @@
     {
       "name": "Speckle CI",
       "description": "Speckle CI is a proof-of-concept continuous integration and delivery platform tailored for AEC workflows. By enabling continuous testing, simulation, and artifact generation from model data, it brings software engineering best practices—such as test-driven development—into the hands of AEC practitioners.",
-      "highlights": ["Speckle", "Rhino Compute", "Express, MongoDB", "Vue, Vuex, Vuetify"],
+      "highlights": [
+        "Speckle",
+        "Rhino Compute",
+        "Express, MongoDB",
+        "Vue, Vuex, Vuetify"
+      ],
       "keywords": ["Speckle", "CI/CD", "AEC"],
       "startDate": "2021-04",
       "endDate": "2021-10",
